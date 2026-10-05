@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title={itemzz.name} icon-name="utility:fulfillment_order">
+        <div class="slds-var-p-around_small">
+            <p>Price: ${itemzz.price}</p>
+            <!-- Triggers Event Bubbling -->
+            <lightning-button 
+                label="Add via Event Bubbling" 
+                variant="brand" 
+                onclick={handleAddClick}
+                class="slds-var-m-top_x-small">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

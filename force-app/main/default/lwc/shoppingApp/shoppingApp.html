@@ -1,0 +1,23 @@
+<template>
+    <!-- Event listener attached at top container catches bubbled event from deep child -->
+    <div onaddtocart={handleAddToCartEvent} class="slds-var-p-around_medium">
+        <lightning-layout multiple-rows="true" title="LWC Architecture Demo">
+            
+            <!-- Left Column: Catalog (Prop Drilling & Event Bubbling) -->
+            <lightning-layout-item size="7" padding="around-small">
+                <lightning-card title="Catalog Component">
+                    <div class="slds-var-p-around_small">
+                        <!-- Prop Drilling: Passing items to catalogList -->
+                        <c-catalog-list catalog-items={products}></c-catalog-list>
+                    </div>
+                </lightning-card>
+            </lightning-layout-item>
+
+            <!-- Right Column: Cart Summary (State Management) -->
+            <lightning-layout-item size="5" padding="around-small">
+                <c-cart-summary></c-cart-summary>
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </div>
+</template>

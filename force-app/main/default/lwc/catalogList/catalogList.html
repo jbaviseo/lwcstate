@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <template for:each={catalogItems} for:item="productzm">
+            <div key={productzm.id} class="slds-col slds-size_1-of-2">
+                <!-- Prop Drilling product down into c-item-tile -->
+                <c-item-tile itemzz={productzm}></c-item-tile>
+            </div>
+        </template>
+    </div>
+</template>

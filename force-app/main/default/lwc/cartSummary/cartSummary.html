@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Cart Summary (State Manager)" icon-name="utility:cart">
+        <div class="slds-var-p-around_medium">
+            <p><strong>Total Items:</strong> {totalItems}</p>
+            <p><strong>Total Cost:</strong> ${totalPrice}</p>
+
+            <lightning-button 
+                label="Clear Cart via State Action" 
+                variant="destructive" 
+                onclick={handleClear}
+                class="slds-var-m-top_small"
+                disabled={isCartEmpty}>
+            </lightning-button>          
+        </div>
+    </lightning-card>
+</template>
