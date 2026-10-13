@@ -1,0 +1,22 @@
+<!-- <template>
+    <c-old-controller onincrement={handleIncrement}></c-old-controller>
+    <c-old-mirror current-value={counterValue}></c-old-mirror>
+</template> -->
+
+<template>
+    <div style="border: 3px solid #0070d2; padding: 16px; border-radius: 8px; background-color: #f3f3f3;">
+        <h2 style="margin-top: 0; color: #0070d2;">c-old-parent (Container)</h2>
+        <p><strong>Parent State (parentValue):</strong> {parentValue}</p>
+        
+        <template lwc:if={controllerAActive}>
+            <c-old-controller onincrement={handleIncrement}></c-old-controller>
+        </template>
+        <template lwc:else>
+            <c-old-controller-passthrough onincrement={handleIncrement} passthrough-value={parentValue}></c-old-controller-passthrough>
+        </template>
+
+        <c-old-mirror mirror-value={parentValue}></c-old-mirror>
+
+        <button style="padding: 6px 12px; cursor: pointer;" onclick={handleComponentToggle}>Toggle Component</button>
+    </div>
+</template>

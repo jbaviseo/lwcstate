@@ -1,15 +1,13 @@
 import { LightningElement } from 'lwc';
 
-export default class ShoppingApp extends LightningElement {
+export default class OldShoppingApp extends LightningElement {
     products = [
         { id: '1', name: 'Salesforce Laptop', price: 1200 },
         { id: '2', name: 'Trailhead Hoodie', price: 60 }
     ];
 
-    // Standard LWC reactive state
     cartItems = [];
 
-    // Getters replace the `@lwc/state` computeds
     get totalItems() {
         return this.cartItems.reduce((sum, item) => sum + item.qty, 0);
     }

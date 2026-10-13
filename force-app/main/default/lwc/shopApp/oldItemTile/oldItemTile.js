@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-export default class ItemTile extends LightningElement {
+export default class OldItemTile extends LightningElement {
     @api itemzz;
 
     handleAddClick() {
